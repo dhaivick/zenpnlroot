@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { Button } from "@/components/ui/button"
 
 export default function HomePage() {
   return (
@@ -18,18 +19,12 @@ export default function HomePage() {
           Full Stack Developer specializing in SaaS platforms, cloud infrastructure, and e-commerce integrations.
         </p>
         <div className="flex justify-center gap-4 pt-6">
-          <Link
-            href="/contact"
-            className="px-6 py-2 rounded-md bg-primary text-white hover:bg-primary/90 transition"
-          >
-            Contact Me
-          </Link>
-          <Link
-            href="/blog"
-            className="px-6 py-2 rounded-md border hover:bg-accent transition"
-          >
-            Read Blog
-          </Link>
+          <Button asChild>
+            <Link href="/contact">Contact Me</Link>
+          </Button>
+          <Button variant="outline" asChild>
+            <Link href="/blog">Read Blog</Link>
+          </Button>
         </div>
       </motion.section>
 
@@ -82,12 +77,9 @@ export default function HomePage() {
         className="text-center py-12"
       >
         <h2 className="text-xl font-semibold mb-4">Let’s collaborate or connect!</h2>
-        <Link
-          href="/contact"
-          className="px-6 py-2 rounded-md bg-primary text-white hover:bg-primary/80 transition"
-        >
-          Get in Touch
-        </Link>
+        <Button asChild>
+          <Link href="/contact">Get in Touch</Link>
+        </Button>
       </motion.section>
     </div>
   )

@@ -34,6 +34,7 @@ export default function SiteHeader() {
             <Link href="/blog" className="hover:underline">Blog</Link>
             <Link href="/contact" className="hover:underline">Contact</Link>
             <Link href="/login" className="hover:underline">Login</Link>
+            <ModeToggle />
             </SheetContent>
         </Sheet>
         </div>
